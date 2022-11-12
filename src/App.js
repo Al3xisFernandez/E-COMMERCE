@@ -1,13 +1,16 @@
 import React from "react";
 import { Header } from "./componentes/Header";
-import { ProductoLista } from "./componentes/Productos/index";
 import 'boxicons';
+import { BrowserRouter as Router } from "react-router-dom";
+import { Paginas } from "./componentes/paginas";
 
 function App() {
   return (
     <div className="App">
+      <Router>
       <Header />
-      <ProductoLista />
+      <Paginas />
+      </Router>
     </div>
   );
 }
