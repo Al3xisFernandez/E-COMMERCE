@@ -94,14 +94,21 @@ header .cart span {
   font-weight: 700;
   background-color: crimson;
 }
-
+.inicio {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 9rem; 
+}
+.inicio h1{
+  font-size: 2.5rem;
+  color: #08a05c;
+  
+}
 .title {
   font-size: 2rem;
-  ;
   padding: 10rem 0 0 0;
   color: #08a05c;
 }
-
 .productos {
   padding: 5rem 1rem;
   margin: 0 auto;
