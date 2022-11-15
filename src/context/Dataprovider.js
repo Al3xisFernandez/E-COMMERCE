@@ -43,7 +43,7 @@ export const DataProvider = (props) =>{
     useEffect(()=>{
         const getTotal  = () =>{
             const res = carrito.reduce((prev,index) =>{
-                    return prev + (item.price * item.cantidad);
+                    // return prev + (item.price * item.cantidad);
             }, 0)
         } 
         getTotal()

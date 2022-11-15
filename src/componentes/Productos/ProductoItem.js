@@ -8,7 +8,7 @@ export const ProductoItem = ({
               title,
               price,
               image,
-              category            
+              category           
 }) => {
 const value = useContext(DataContext);
 const addCarrito= value.addCarrito;
@@ -23,7 +23,7 @@ const addCarrito= value.addCarrito;
         </a>
         <div className="producto__footer">
           <h1> {title} </h1>
-          <p> {Categoria}</p>
+          <p> {category}</p>
           <p className="price"> ${price}</p>
         </div>
         <div className="buttom">

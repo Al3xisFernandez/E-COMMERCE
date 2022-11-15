@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { DataContext } from "../../context/Dataprovider";
-import { prductoItem } from "./ProductoItem";
+import { ProductoItem } from "./ProductoItem";
 
 export const ProductoLista = () => {
 
@@ -17,7 +17,7 @@ export const ProductoLista = () => {
               title={producto.title}
               price={producto.price}
               image={producto.image}
-              category={producto.category}
+              category={producto.categoria}
               cantidad={producto.cantidad}
               />
               ))
