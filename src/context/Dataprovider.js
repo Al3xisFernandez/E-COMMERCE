@@ -31,7 +31,7 @@ export const DataProvider = (props) =>{
         }
     }
     useEffect(() =>{
-        const dataCarrito = JSON.parse(localStorage.getItem('carrito')
+        const dataCarrito = JSON.parse(localStorage.getItem('dataCarrito')
         )
         if(dataCarrito){
             setCarrito(dataCarrito)
@@ -41,13 +41,15 @@ export const DataProvider = (props) =>{
         localStorage.setItem('dataCarrito', JSON.stringify(carrito))
     },[carrito])
     useEffect(()=>{
-        const getTotal  = () =>{
+        const getTotal  = item =>{
             const res = carrito.reduce((prev,index) =>{
-                    // return prev + (item.price * item.cantidad);
+                return prev + (item.price * item.cantidad);
             }, 0)
+            setTotal(res)
         } 
         getTotal()
     },[carrito])
+
     const value = {
         productos : [productos],
         menu : [menu, setMenu],

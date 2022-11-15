@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Link } from "react-router-dom";
+import  {Link}  from "react-router-dom";
 import { DataContext } from "../../context/Dataprovider";
 
 export const ProductoItem = ({
@@ -16,7 +16,7 @@ const addCarrito= value.addCarrito;
 
     return (
         <div className="producto">
-        <a href="#">
+        <Link to={`/producto/${id}`}>
           <div className="producto__img">
             <img src={image.default} alt={title} />
           </div>
@@ -31,7 +31,7 @@ const addCarrito= value.addCarrito;
             Anadir al carrito
           </button>
           <div>
-            <a href="#" className="btn">Vista</a>
+            <Link to={`/producto/${id}`} className="btn">Vista</Link>
           </div>
         </div>
       </div>
