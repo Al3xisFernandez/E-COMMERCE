@@ -16,11 +16,11 @@ const addCarrito= value.addCarrito;
 
     return (
         <div className="producto">
-        <Link to={`/producto/${id}`}>
+        <Link to={`/producto/${id}`}/>
           <div className="producto__img">
             <img src={image.default} alt={title} />
           </div>
-        </a>
+        
         <div className="producto__footer">
           <h1> {title} </h1>
           <p> {category}</p>
