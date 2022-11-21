@@ -5,13 +5,14 @@ import {DataProvider} from './context/DataProvider';
 import { BrowserRouter as Router} from "react-router-dom";
 import Pages from "./components/Page.js";
 import "boxicons";
+import Login  from "./components/Login/Login";
 
 function App() {
-
   return (
     <DataProvider>
     <div className="App">
       <Router>
+      <Login />
       <Header />
       <Carrito />
       <Pages />
