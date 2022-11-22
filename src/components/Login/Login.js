@@ -1,46 +1,44 @@
-import React from 'react';
+import { useState } from "react";
+const Login = () => {
+    const [Email, setEmail] = useState('')
+    const [password, setPassword] = useState('');
+    const errorMessage = validate(Email,password);
 
-export const SignIn  = () => {
-    let pass = document.getElementById("pass").value;
-    let user = document.getElementById("user").value;
-    let users = [];
-    const user1 = {
-        user:"user1",
-        pass:'1234'
-    }
-    users.push(user1);
-    localStorage.setItem('users', JSON.stringify(users));
-
-    if (localStorage.getItem("users")){
-        let users = JSON.parse(localStorage.getItem('users'));
-
-        for(let indice = 0; indice < users.length; indice++){
-            if (user === users[indice].user && pass === users[indice].password){
-                console.log("usuario logueado");
-                break;
-            }
-        }
-    }
-}
-
-document.querySelector("#login").addEventListener('click', (event) =>{
-    event.preventDefault();
-    SignIn();
-})
-
-export function Login() {
     return (
-        <div className='contenair'>
-            <form>
-                <label>
-                    User:
-                    <input type="text" name="user" />
-                </label>
-                    Password:
-                <input type="text" name="pass" />
-                <button id='login' type="submit" name='Login'>Login</button>
-            </form>
-        </div>
+        <form onSubmit={ev => {
+            ev.preventDefault();
+            SigIn(Email, password);
+        }}>
+            <input
+                type='text'
+                name='Email'
+                placeholder="Email"
+                autoComplete="off"
+                value={Email}
+                onChange={ev =>setEmail(ev.target.value)}
+            ></input>
+            <input 
+            type='password' 
+            name='password' 
+            placeholder="contraseña"
+            value={password}
+             onChange={ev =>setPassword(ev.target.value)}
+            ></input>
+            <p>{errorMessage}</p>
+            <button type="submit" disabled={errorMessage}>SigIn</button>
+        </form>
     );
+};
+
+const SigIn = (Email, password) => {
+    if (Email === 'iniciandosesion@gmail.com' && password === 'test')
+        alert('Login correcto');
+    else alert('Login incorreccto');
+};
+
+const validate = (email, password) => {
+    if(!email.include('@')) return'Email incorrecto';
+    if(password.length < 8) return 'Contraseña incorrecta'
 }
+
 export default Login;
