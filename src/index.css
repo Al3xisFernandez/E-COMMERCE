@@ -397,9 +397,6 @@ header ul li a{
     font-size: 1.4rem;
     color: #30333a;
 }
-
-
-
 /* ------------- RELACIONADO --------- */
 .relacionados{
     text-align: center;
@@ -517,4 +514,8 @@ header ul li a{
 }
 .btn-show-hide-pwd:active{
    transform: scale(0.9);
+}
+form {
+    width: 50px;
+        
 }

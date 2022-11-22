@@ -2,10 +2,11 @@ import { useState } from "react";
 const Login = () => {
     const [Email, setEmail] = useState('')
     const [password, setPassword] = useState('');
+
     const errorMessage = validate(Email,password);
 
     return (
-        <form onSubmit={ev => {
+        <form className="" onSubmit={ev => {
             ev.preventDefault();
             SigIn(Email, password);
         }}>
@@ -31,13 +32,13 @@ const Login = () => {
 };
 
 const SigIn = (Email, password) => {
-    if (Email === 'iniciandosesion@gmail.com' && password === 'test')
+    if (Email === 'iniciandosesion@gmail.com' && password === 'probando')
         alert('Login correcto');
     else alert('Login incorreccto');
 };
 
 const validate = (email, password) => {
-    if(!email.include('@')) return'Email incorrecto';
+    if(!email.includes('@')) return'Email incorrecto';
     if(password.length < 8) return 'Contraseña incorrecta'
 }
 
