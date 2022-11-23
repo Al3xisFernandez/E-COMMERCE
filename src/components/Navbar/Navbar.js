@@ -13,7 +13,7 @@ function Navbar() {
     <>
       <NavContainer>
         <div className={`links ${clicked ? 'active' : ''}`}>
-          <a onClick={handleClick} href="#h">Productos</a>
+          <a onClick={handleClick} href="#Login">Login</a>
           <a onClick={handleClick} href="#h">Quienes Somos</a>
           <a onClick={handleClick} href="#h">Contactos</a>
           <a onClick={handleClick} href="#h">Redes</a>
@@ -42,7 +42,6 @@ h2{
   }
   
   padding: .4rem;
-  background-color: #291;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -116,5 +115,13 @@ const BgDiv = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+    @media(max-width: 558px){
+      border-radius: 0 0 60% 0;
+      
+    }
+    @media(max-width: 388px){
+      border-radius: 0 0 40% 0;
+      
+    }
   }
 `

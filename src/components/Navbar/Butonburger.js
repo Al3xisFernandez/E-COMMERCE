@@ -18,7 +18,7 @@ function Butonburger(props) {
 export default Butonburger
 
 const Burguer = styled.div`
-  /* nav-icon-5 */
+/* nav-icon-5 */
 .nav-icon-5{
   width: 35px;
   height: 30px;
@@ -28,7 +28,7 @@ const Burguer = styled.div`
   display: inline-block;
 }
 .nav-icon-5 span{
-  background-color:#fff;
+  background-color:#000;
   position: absolute;
   border-radius: 2px;
   transition: .3s cubic-bezier(.8, .5, .2, 1.4);

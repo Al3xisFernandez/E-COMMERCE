@@ -6,7 +6,7 @@ const Login = () => {
     const errorMessage = validate(Email,password);
 
     return (
-        <form className="" onSubmit={ev => {
+        <form className="containerForm" onSubmit={ev => {
             ev.preventDefault();
             SigIn(Email, password);
         }}>
@@ -26,7 +26,7 @@ const Login = () => {
              onChange={ev =>setPassword(ev.target.value)}
             ></input>
             <p>{errorMessage}</p>
-            <button type="submit" disabled={errorMessage}>SigIn</button>
+            <button type="submit" disabled={errorMessage}>Ingresar</button>
         </form>
     );
 };
