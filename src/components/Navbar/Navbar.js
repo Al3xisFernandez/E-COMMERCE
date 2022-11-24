@@ -100,7 +100,7 @@ h2{
 `
 
 const BgDiv = styled.div`
-  background-color: #291;
+  background-color: green ;
   position: absolute;
   top: -1000px;
   left: -1000px;

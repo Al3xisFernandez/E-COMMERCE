@@ -32,14 +32,13 @@ const Login = () => {
 };
 
 const SigIn = (Email, password) => {
-    if (Email === 'iniciandosesion@gmail.com' && password === 'probando')
-        alert('Login correcto');
-    else alert('Login incorreccto');
-};
-
+if (Email === 'iniciandosesion@gmail.com' && password === 'probando')
+alert('Login correcto');
+else alert('Login incorreccto');
+localStorage.setItem("SignIn", JSON.stringify(Email, password));
+}
 const validate = (email, password) => {
     if(!email.includes('@')) return'Email incorrecto';
     if(password.length < 8) return 'Contraseña incorrecta'
 }
-
 export default Login;

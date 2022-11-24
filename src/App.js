@@ -7,6 +7,8 @@ import Pages from "./components/Page.js";
 import "boxicons";
 import Navbar from './components/Navbar/Navbar';
 import Login from 'components/Login/Login';
+import Footer from 'components/Footer/Footer';
+import Contactenos from 'components/Pagina de Contacto/Contactenos';
 function App() {
   return (
     <DataProvider>
@@ -17,6 +19,8 @@ function App() {
       <Header />
       <Carrito />
       <Pages />
+      <Footer />
+      <Contactenos />
       </Router>
     </div>
     </DataProvider>
