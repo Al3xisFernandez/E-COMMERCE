@@ -6,11 +6,19 @@ const Login = () => {
     const errorMessage = validate(Email,password);
 
     return (
-        <form className="containerForm" onSubmit={ev => {
-            ev.preventDefault();
-            SigIn(Email, password);
+        
+        
+            <form className="conteni" onSubmit={ev => {
+        ev.preventDefault();
+        SigIn(Email, password);
         }}>
-            <input
+            <input type="checkbox" id="botonModal"></input>
+        <label for="botonModal" className="tlmodal">Ingresar</label>
+        <div className="mod">
+        <div className="conten">
+			<p>Ingrese Email y Contraseña</p>
+            <label for="botonModal">X</label>
+            <input className="name"
                 type='text'
                 name='Email'
                 placeholder="Email"
@@ -18,16 +26,21 @@ const Login = () => {
                 value={Email}
                 onChange={ev =>setEmail(ev.target.value)}
             ></input>
-            <input 
+            <input className="namex"
             type='password' 
             name='password' 
             placeholder="contraseña"
             value={password}
-             onChange={ev =>setPassword(ev.target.value)}
+            onChange={ev =>setPassword(ev.target.value)}
             ></input>
-            <p>{errorMessage}</p>
-            <button type="submit" disabled={errorMessage}>Ingresar</button>
+           <div id="subm"><p>{errorMessage}
+            <button type="submit" disabled={errorMessage} >Ingresar
+            </button></p></div>
+           
+        </div>
+        </div>
         </form>
+        
     );
 };
 

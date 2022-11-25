@@ -9,6 +9,8 @@ import Navbar from './components/Navbar/Navbar';
 import Login from 'components/Login/Login';
 import Footer from 'components/Footer/Footer';
 import Contactenos from 'components/Pagina de Contacto/Contactenos';
+
+
 function App() {
   return (
     <DataProvider>
@@ -19,12 +21,14 @@ function App() {
       <Header />
       <Carrito />
       <Pages />
+    <Contactenos />
       <Footer />
-      <Contactenos />
       </Router>
     </div>
     </DataProvider>
   );
 }
+
+
 
 export default App;

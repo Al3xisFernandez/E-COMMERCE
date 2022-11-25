@@ -1,41 +1,25 @@
 import React from "react";
-// import emailjs from "emailjs-com";
-
-export const Contactenos = () => {
+ const Contactenos = () => {
+    
     return (
-        <div className="div-form">
-            <h1 className="title-form">Contactenos</h1>
-            <form className="form-mail">
-                <label>Nombre</label>
-                <input type="text" name="user-name"  />
-                <hr/>
-                <label>Email</label>
-                <input type="email" name="user_mail"/>
-                <hr/>
-                <label>Mensaje</label>
-                <textarea name="user_message" id="" cols="30" rows={10}></textarea>
-                <hr />
-                <button>Enviar</button>
-            </form>
-        </div>
-    )
+        <>
+       <input type="checkbox" id="btn-modal"/>
+	<label for="btn-modal" className="lbl-modal">Contactenos</label>
+	<div className="modal">
+		<div className="contenedor">
+			<p>¡Bienvenidos!</p>
+
+			<label for="btn-modal">X</label>
+			<form className="contenido">
+            <input className="GET-name" type="text" name="name"placeholder="Deja tu comentario"/>
+            <input className="submit"type="submit" />
+            
+			</form>
+		</div>
+	</div>                                                                                                                                                                                                                                                                                                                                                                  
+        </>
+        )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
