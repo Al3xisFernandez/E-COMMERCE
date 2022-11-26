@@ -1,6 +1,5 @@
 import React from "react";
  const Contactenos = () => {
-    
     return (
         <>
        <input type="checkbox" id="btn-modal"/>
@@ -8,21 +7,14 @@ import React from "react";
 	<div className="modal">
 		<div className="contenedor">
 			<p>¡Bienvenidos!</p>
-
 			<label for="btn-modal">X</label>
 			<form className="contenido">
             <input className="GET-name" type="text" name="name"placeholder="Deja tu comentario"/>
             <input className="submit"type="submit" />
-            
 			</form>
 		</div>
 	</div>                                                                                                                                                                                                                                                                                                                                                                  
         </>
-        )
+     )
 }
-
-
-
-
-
 export default Contactenos;

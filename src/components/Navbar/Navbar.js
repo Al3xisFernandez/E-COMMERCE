@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Butonburger from './Butonburger'
 
@@ -6,17 +7,27 @@ function Navbar() {
 
   const [clicked, setClicked] = useState(false)
   const handleClick = () => {
-    //cuando esta true lo pasa a false y vice versa
     setClicked(!clicked)
   }
   return (
     <>
       <NavContainer>
         <div className={`links ${clicked ? 'active' : ''}`}>
-          <a onClick={handleClick} href="#Login">Login</a>
-          <a onClick={handleClick} href="#h">Quienes Somos</a>
-          <a onClick={handleClick} href="#h">Contactos</a>
-          <a onClick={handleClick} href="#h">Redes</a>
+          <Link to="/">
+            <div className="logo">
+            </div>
+          </Link>
+          <ul>
+            <li>
+              <Link onClick={handleClick} to="/">INICIO</Link>
+            </li>
+            <li>
+              <Link onClick={handleClick} to="/productos">PRODUCTOS</Link>
+            </li>
+            <li>
+              <Link onClick={handleClick} to="/QuienesSomos">QUIENES SOMOS</Link>
+            </li>
+          </ul>
         </div>
         <div className='burguer'>
           <Butonburger clicked={clicked} handleClick={handleClick} />
@@ -40,8 +51,6 @@ h2{
       font-weight: bold;
     }
   }
-  
-  padding: .4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -78,17 +87,19 @@ h2{
   .links.active{
     width: 100%;
     display: block;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    top: 500px;
+    margin:auto;
+    
+    top: 300px;
     left: 0;
     right: 0;
     text-align: center;
+    justify-content:center;
+    z-index: 4;
     a{
       font-size: 2rem;
       margin-top: 1rem;
       color: white;
+      z-index: 4;
     }
   }
   .burguer{
@@ -98,15 +109,14 @@ h2{
     }
   }
 `
-
 const BgDiv = styled.div`
-  background-color: green ;
+  background-color: #291 ;
   position: absolute;
   top: -1000px;
   left: -1000px;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 3;
   transition: all .6s ease ;
   
   &.active{

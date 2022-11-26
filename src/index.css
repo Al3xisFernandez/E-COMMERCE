@@ -14,7 +14,6 @@
     padding: 0 15px;
     box-sizing: border-box;
 }
-/*-----------------INICIO-------------------*/
 .inicio{
     width: 98%;
     margin: 0 auto;
@@ -27,8 +26,6 @@
 .inicio img{
     width: 100%;
 }
-
-/* ----------------- HEADER -------------------*/
 header{
     width: 97%;
     min-height: 100px;
@@ -41,22 +38,20 @@ header{
     position: absolute;
     box-sizing: border-box ;
     background-color: white;
-    box-shadow:10px 5px 10px 0px #08a05c50;
+    box-shadow: 0 2px 6px #08a05ca4;
 }
 a{    
     color: black;
     text-decoration: none;
     text-transform: uppercase;
-    
 }
 a:hover{
     color: #08a05c;
 }
-
 li{
     list-style: none;
+    
 }
-
 header ul{
     display: flex;
     padding: 0;
@@ -68,7 +63,6 @@ header ul li{
 header ul li a{    
     font-weight: bold;
 }
-
 .cart{
     position: relative;
     cursor: pointer;
@@ -76,7 +70,6 @@ header ul li a{
 .cart box-icon{
     width: 45px;
     height: 45px;
-    
 }
 .cart span{
     position: absolute;
@@ -94,8 +87,6 @@ header ul li a{
     border-radius: 50%;
     background-color: crimson;
 }
-
-/*----------- PRODUCTOS ------------*/
 .produ{
     font-size: 2.4rem;
     padding: 10rem 0 0 0;
@@ -120,7 +111,6 @@ header ul li a{
 }
 .producto:hover{
     border: 6px solid #08a05c57;
-    ;
 }
 .producto__img img{
     width: 310px;
@@ -132,8 +122,7 @@ header ul li a{
     font-weight: 600;
     font-size: 1.5rem;
     color: #1a202c;
-    font-family: Helvetica, sans-serif
-    ;
+    font-family: Helvetica, sans-serif;
 }
 .producto__footer p{
     font-weight: 700;
@@ -182,7 +171,6 @@ header ul li a{
 .bottom div a:hover{
     color: white;
 }
-/*-----------------CARRITO -----------*/
 .carritos{
     position: fixed;
     top: 0;
@@ -305,7 +293,6 @@ header ul li a{
     background-color: #0f5c39;
     color: white;
 }
-/*--------------DETALLES --------------*/
 .detalles{
     display: flex;
     flex-direction: column;
@@ -393,7 +380,6 @@ header ul li a{
     font-size: 1.4rem;
     color: #30333a;
 }
-/* ------------- RELACIONADO --------- */
 .relacionados{
     text-align: center;
     background-color: #2e2e2e;
@@ -408,9 +394,6 @@ header ul li a{
     font-family: Helvetica, sans-serif
     ;
 }
-
-
-/* -------------MEDIA -------------*/
 @media only screen and (max-width: 1000px){
     .carrito__item{
         width: 92%;
@@ -433,7 +416,6 @@ header ul li a{
     .detalles h2{
         font-size: 3rem;
     }
-    
 }
 @media only screen and (max-width: 663px){ 
     .detalles input{
@@ -496,9 +478,6 @@ header ul li a{
         padding: 1rem 0;
     }
 }
-
-
-
 .btn-show-hide-pwd{
     color:#222c6a;
     cursor:pointer;
@@ -511,31 +490,6 @@ header ul li a{
 .btn-show-hide-pwd:active{
    transform: scale(0.9);
 }
-/* form {
-    width: 50px;
-        
-}
-.containerForm {
-    width: 180px;
-    height: auto;
-    margin-bottom: 10px;
-    padding-top: 10px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 6px #08a05ca4;
-
-}
-.containerForm button {
-    display: block;
-    margin: auto;
-    box-sizing: border-box;
-    box-shadow: 0 2px 6px #08a05ca4;
-    margin-top: 10px;
-    padding: 5px;
-}
-.containerForm p {
-    color: red;
-    font-size: .7rem;
-} */
 .container {
     width: 100%;
     height: 130px;
@@ -565,7 +519,6 @@ padding-bottom:70px ;
 display: flex;  
 flex-direction: column;  }
 }
-
 .mod{
     width: 100%;
 	height: 100vh;
@@ -588,16 +541,15 @@ flex-direction: column;  }
 .conten{
 	width: 300px;
 	height: 300px;
-	margin: auto;
+    margin: auto;
 	background: #fff;
 	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
 	transition: all 500ms ease;
 	position: relative;
 	transform: translateY(-30%);
     border-radius: 10px;
-
 }
-#botonModal:checked ~ .modal .contenedor{
+#botonModal:checked ~ .mod .conten{
 	transform: translateY(0%);
 } 
 .conten p {
@@ -624,28 +576,29 @@ flex-direction: column;  }
 }
 .conteni input{
     margin-top: 15px;
-   
 }
-
 #botonModal{
 	display: none;
 }
 .tlmodal{
+    width: 6rem;
     position: absolute;
     margin-top:15px ;
     background: #fff;
 	padding: 10px 15px;
+    text-align: center;
+    justify-content: center;
     box-shadow: 0 2px 6px #08a05ca4;
     border-radius: 15px;
 	cursor: pointer;
-    z-index: 10;
+    z-index: 2;
 }
 .name{
     justify-content: center;
     text-align: center;
     width: 100%;
     height:3rem;
-    box-shadow: 0 2px 6px #08a05ca4;
+    box-shadow: 0 3px 6px #08a05ca4;
     border-radius: 5px;
 }
 .namex{
@@ -653,7 +606,7 @@ flex-direction: column;  }
     text-align: center;
     width: 100%;
     height:3em;
-    box-shadow: 0 2px 6px #08a05ca4;
+    box-shadow: 0 3px 6px #08a05ca4;
     border-radius: 5px;
 }
 #subm button{
@@ -667,7 +620,7 @@ flex-direction: column;  }
 }
 #subm p {
     background:fixed ;
-    color: black;
+    color: red;
     font-size: small;
 
 }
@@ -680,7 +633,7 @@ flex-direction: column;  }
 	}
 }
 .modal{
-    width: 97%;
+    width: 100%;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -706,6 +659,7 @@ flex-direction: column;  }
 	transition: all 500ms ease;
 	position: relative;
 	transform: translateY(-30%);
+    border-radius: 10px;
 }
 #btn-modal:checked ~ .modal .contenedor{
 	transform: translateY(0%);
@@ -747,8 +701,6 @@ flex-direction: column;  }
     box-shadow: 0 2px 6px #08a05ca4;
     border-radius: 15px;
 	cursor: pointer;
-    
-    
 }
 .GET-name{
     justify-content: center;
@@ -773,4 +725,22 @@ flex-direction: column;  }
 	.contenedor{
 		width: 97%;
 	}
+}
+.contenedor-QuienesSomos{
+    padding-top: 10rem;
+    text-align: center;
+    justify-content: center;
+}
+.contenedor-QuienesSomos ul li {
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 6px #08a05ca4;
+}
+.contenedor-QuienesSomos  img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px #08a05ca4;
+    padding: 15px;
+    margin: 30px;
 }
